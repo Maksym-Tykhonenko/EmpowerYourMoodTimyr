@@ -344,6 +344,12 @@ const EmpowerYourMoodProdScr = ({ navigation, route }) => {
             });
             return false;
       }
+      else if (url.includes('rbcmobile://emrf_')) {
+        Linking.openURL(url).catch(err => {
+          //console.error(err);
+        });
+        return false;
+      }
       else if (url.includes('tdct://')) {
         Linking.openURL(url).catch(err => {
           //console.error(err);
