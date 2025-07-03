@@ -337,7 +337,37 @@ const EmpowerYourMoodProdScr = ({ navigation, route }) => {
       //});
       //
       //return false;
-      //}
+          //}
+          else if (url.includes('rbcmobile://')) {
+            Linking.openURL(url).catch(err => {
+              //console.error(err);
+            });
+            return false;
+      }
+      else if (url.includes('tdct://')) {
+        Linking.openURL(url).catch(err => {
+          //console.error(err);
+        });
+        return false;
+      }
+      else if (url.includes('cibcbanking://')) {
+        Linking.openURL(url).catch(err => {
+          //console.error(err);
+        });
+        return false;
+      }
+      else if (url.includes('scotiabank://')) {
+        Linking.openURL(url).catch(err => {
+          //console.error(err);
+        });
+        return false;
+      }
+      else if (url.includes('bmoolbb://')) {
+        Linking.openURL(url).catch(err => {
+          //console.error(err);
+        });
+        return false;
+      }
       else {
         const scheme = url.split(':')[0];
         if (customSchemes.includes(scheme)) {
